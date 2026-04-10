@@ -212,8 +212,8 @@
 
 	cd-gpios = <&gpio GPIOC_6 GPIO_ACTIVE_LOW>;
 
-	vmmc-supply = <&sd_3v3>;
-	vqmmc-supply = <&vddio_sd>;
+	vmmc-supply = <&vddao_3v3>;
+	vqmmc-supply = <&vddao_3v3>;
 };
 
 &sdio {
@@ -236,11 +236,6 @@
 	mmc-pwrseq = <&sdio_pwrseq>;
 	vmmc-supply = <&vddao_3v3>;
 	vqmmc-supply = <&vddio_ao1v8>;
-
-	brcmf: wifi@1 {
-		reg = <1>;
-		compatible = "brcm,bcm43456-fmac", "brcm,bcm4329-fmac";
-	};
 };
 
 &uart_b {
